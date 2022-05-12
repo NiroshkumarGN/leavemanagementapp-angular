@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/">LeaveManagementSystem</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="home">HOME</a>
+          </li>
+          <li class="nav-item" *ngIf="!isLoggedIn()">
+            <a class="nav-link" routerLink="register">REGISTER</a>
+          </li>
+          <li class="nav-item" *ngIf="!isLoggedIn()">
+            <a class="nav-link" routerLink="login">LOGIN</a>
+          </li>
+          
+          <li class="nav-item" *ngIf="isLoggedIn()  && getRole()=='USER'">
+            <a class="nav-link" routerLink="applyingleave">Apply Leave</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn()  && getRole()=='USER'">
+            <a class="nav-link" routerLink="leavestatus">Leavestatus</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn()  && getRole()=='ADMIN'" >
+            <a class="nav-link" routerLink="applyleavelist">Apply leave list</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn() && getRole()=='ADMIN'" >
+            <a class="nav-link" routerLink="userlist"> User list</a>
+          </li>
+         
+          <li class="nav-item" *ngIf="isLoggedIn()">
+            <a class="nav-link" (click)="logout()">logout</a>
+          </li>
+        
+         
+          
+          

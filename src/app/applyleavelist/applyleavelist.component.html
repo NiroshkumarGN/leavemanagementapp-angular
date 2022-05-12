@@ -1,0 +1,26 @@
+<h1>APPLY LEAVE LIST </h1>
+<br>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>NUMBER OF DAYS LEAVE</th>
+            <th>LEAVE FROM DATE</th>
+            <th>LEAVE TO DATE</th>
+            <th>REASON</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let leave of leavelist;let i= index">
+            <td>{{i+1}}</td>
+            <td>{{leave.name}}</td>
+            <td>{{leave.numberOfDays}}</td>
+            <td>{{leave.leaveFromDate}}</td>
+            <td>{{leave.leaveToDate}}</td>
+            <td>{{leave.reason}}</td>
+            <td><button type="approve" class="btn-primary">Approve</button> &nbsp;
+            <button type="reject" class="btn-danger">Reject</button></td>
+            </tr>
+    </tbody>
+</table>

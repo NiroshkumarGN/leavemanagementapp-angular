@@ -1,0 +1,23 @@
+<h1>LOGIN</h1>
+    
+<form ngNativeValidate (submit)="login()">
+ 
+  <div>
+      <label for="emailId">Email Id:</label>
+      <input type="text" name="emailId" [(ngModel)]="emailId" id="emailId"
+      placeholder="Enter Your Email Id" required>
+  </div>
+  <br>
+  <div>
+      <label for="password">Password:</label>
+      <input type="password" name="password"id="password"  [(ngModel)]="password"
+      placeholder="Enter Your Password" required >
+  </div>
+  <br>
+  <div>
+    <form (ngSubmit)="login()"></form>
+    <button type="login "class="btn btn-success">LOGIN</button>   &nbsp;
+    <button type="reset"class="btn btn-danger">RESET</button>
+
+</div>
+</form>

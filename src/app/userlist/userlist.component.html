@@ -1,0 +1,28 @@
+<h1>USER LIST </h1>
+<br>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>EMAIL ID</th>
+            <th>BRANCH NAME</th>
+            <th>MOBILE NUMBER</th>
+            <th>DATE OF BIRTH</th>
+            <th>GENDER</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of userlist;let i= index">
+            <td>{{i+1}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.emailId}}</td>
+            <td>{{user.branchName}}</td>
+            <td>{{user.mobileNumber}}</td>
+            <td>{{user.dateOfBirth}}</td>
+            <td>{{user.gender}}</td>
+
+
+            </tr>
+    </tbody>
+</table>

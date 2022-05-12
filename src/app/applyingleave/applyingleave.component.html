@@ -1,0 +1,45 @@
+<h1>APPLY LEAVE</h1>
+<form ngNativeValidate (submit)="applyingleave()">
+<div>
+    <label for="id">Id:</label>
+    <input type="text" name="id" [(ngModel)]="id"  id="id" 
+     placeholder="Enter Your employeeId" required autofocus>
+</div>
+<br>
+<div>
+    <label for="name">Name:</label>
+    <input type="text" name="name" [(ngModel)]="name"  id="name" 
+     placeholder="Enter Your Name" required autofocus>
+</div>
+<br>
+<div>
+    <label for="numberOfDays">Leave Number Of Days:</label>
+    <input type="number" name="leaveNumberOfDays" [(ngModel)]="numberOfDays" id="numberOfDays" 
+     placeholder="Enter Leave No. Of Days" required >
+
+</div>
+<br> 
+<div>
+        <label for="leaveFromDate">Leave From Date:</label>
+        <input type="date" name="leaveFromDate" [(ngModel)]="leaveFromDate" id="leaveFromDate" 
+        placeholder="LeaveFromDate"  required>
+    </div>
+    <br> 
+<div>
+        <label for="leaveToDate">Leave To Date:</label>
+        <input type="date" name="LeaveToDate" [(ngModel)]="leaveToDate" id="leaveToDate"                   
+        placeholder="LeaveToDate"  required>
+    </div>
+    <br>
+    <div>
+        <label for="reason">Reason:</label>
+        <input type="text" name="name" [(ngModel)]="reason"  id="reason" 
+         placeholder="Enter Your Reason" required autofocus>
+    </div>
+    <br>
+    <div>
+        <form (ngSubmit)="applyingleave()"></form>
+        <button type="submit"class="btn btn-success">SUBMIT</button>   &nbsp;
+        <button type="reset"class="btn btn-danger">RESET</button>
+    
+    </div>
